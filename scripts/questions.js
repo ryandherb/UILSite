@@ -428,36 +428,6 @@ out.print(D + " " + P + " " + R);
         {
             question: "What is the output of the code segment to the right?",
             code: `
-int D = 10;
-int R = 2;
-int P = 4;
-if (D + R > P)
-    P = D;
-else
-    D = P;
-if (D + P > R)
-    R = D;
-else
-    D = R;
-if (P + R > D)
-    D++;
-else
-    D--;
-out.print(D + " " + P + " " + R);
-`,
-            answers: {
-                a: '10 2 4',
-                b: '11 10 11',
-                c: '10 10 10',
-                d: '11 10 10',
-                e: '10 10 11'
-            },
-            level: 'Regional',
-            correctAnswer: 'd'
-        },
-        {
-            question: "What is the output of the code segment to the right?",
-            code: `
 int[] perfect = new int[25];
 for(int x=0; x<24; x++)
     perfect[x] = x * x - 1;
@@ -996,15 +966,108 @@ if (quizType === "Recursion") {
 
 if (quizType === "Bases And Numbers") {
     window.questions = [
+        // 2018 District
         {
-            question: 'num question goes here:',
+            question: 'Which of the following is the sum of 11111111_2 and 11110011_2?',
             answers: {
-                a: 'yes!!!',
-                b: 'no.',
-                c: 'maybe?'
+                a: "1F3_16",
+                b: "497_10",
+                c: "762_8", 
+                d: "111010010_2",
+                e: "None of the above."
             },
-            correctAnswer: 'c'
-        }
+            correctAnswer: 'c',
+            level: 'District' 
+        },
+        {
+            question: 'Which of the following Java expressions will correctly round n to r decimal places if n is a double and r is an int?',
+            answers: {
+                a: "(int)(r*Math.pow(10, n)+0.5)/Math.pow(10, n)",
+                b: "(n*Math.pow(10, r)+0.5)/Math.pow(10, r)",
+                c: "(int)(n*Math.pow(10, r)+0.5)/Math.pow(10, r)", 
+                d: "(int)(n*10+0.5)/10",
+                e: "(int)(n/Math.pow(10, r)+0.5)*Math.pow(10, r)"
+            },
+            correctAnswer: 'c',
+            level: 'District' 
+        },
+        {
+            question: 'Evaluate the prefix expression shown:',
+            code: "* - + 8 5 3 2",
+            answers: {
+                a: "20", 
+                b: "12", 
+                c: "88", 
+                d: "45",
+                e: "Correct answer not shown."
+            },
+            correctAnswer: 'a',
+            level: 'District' 
+        },
+        {
+            question: `What is the decimal equivalent of this signed binary 8-bit two's complement value?`,
+            code: "10101010",
+            answers: {
+                a: "-85",
+                b: "86", 
+                c: "-86",
+                d: "87",
+                e: "Correct answer not shown."
+            },
+            correctAnswer: 'c',
+            level: 'District' 
+        },
+        // 2023 State
+        {
+            question: `What is the output of the code segment to the right?`,
+            code: `
+int A = 10;
+int B = 25;
+int Z = A + B % A * A - B / A;
+out.print(Z);
+            `,
+            answers: {
+                a: "50",
+                b: "52", 
+                c: "54",
+                d: "56",
+                e: "58"
+            },
+            correctAnswer: 'e',
+            level: 'State' 
+        },
+        {
+            question: `What is the output of the code segment to the right?`,
+            code: `
+int R = 20;
+int Y = R >> 2 ^ 2 + R & 11;
+out.print(Y);
+            `,
+            answers: {
+                a: "7",
+                b: "12", 
+                c: "15",
+                d: "21",
+                e: "23"
+            },
+            correctAnswer: 'a',
+            level: 'State' 
+        },
+        {
+            question: `Evaluate the prefix expression to the right.`,
+            code: `
++ / * 3 4 - 17 * 5 3 / + 6 6 3
+            `,
+            answers: {
+                a: "15",
+                b: "24", 
+                c: "12",
+                d: "10",
+                e: "23"
+            },
+            correctAnswer: 'd',
+            level: 'State' 
+        },
     ]
 }
 
