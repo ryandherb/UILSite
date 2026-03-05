@@ -17,12 +17,13 @@
  */
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton, nextButton, previousButton) {
     let i = 0;
-
+    const correct = new Audio("assets/correct.mp3")
     function showResults(userAnswer) {
 
         if (questions[i].correctAnswer === userAnswer) {
             resultsContainer.innerHTML =
                 '<div class="correct">Correct!</div>';
+            correct.play() 
         } else {
             resultsContainer.innerHTML =
                 '<div class="wrong">Wrong!, correct answer is: '
