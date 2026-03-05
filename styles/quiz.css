@@ -112,6 +112,15 @@ a:hover {
 .question {
     margin-bottom: 22px;
     line-height: 1.6;
+    font-size: larger;
+}
+.code {
+    white-space: pre-wrap;
+    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+    background-color: #0f1412;
+    outline: 2px solid #4f8f6b;
+    padding: 8px;
+    font-size: 18px;
 }
 
 /*answers */
