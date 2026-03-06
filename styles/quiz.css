@@ -138,6 +138,7 @@ a:hover {
     cursor: pointer;
     transition: all 0.15s ease;
     font-family: var(--font-main);
+    white-space: pre-wrap;
 }
 
 /* subtlety is key (green violence) */
