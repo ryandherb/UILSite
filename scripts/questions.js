@@ -16,6 +16,9 @@
  * Current Tags Include: 
  * 1. Tracing - Problems that require in depth tracing of algorithms.
  * 2. Recursion - Problems that require a recursive approach (function calls itself)
+ * 3. Numbers - Problems invorrent Tags Include: 
+ * 1. Tracing - Problems that require in depth tracing of algorithms.
+ * 2. Recursion - Problems that require a recursive approach (function calls itself)
  * 3. Numbers - Problems involving mathematical reasoning or general number concepts.
  * 4. Boolean - Problems involving boolean logic and algebra.
  * 5. Misc. - Problems that are ultra-specific and do not fall into any other category. 
@@ -24,9 +27,6 @@
  * ___
  * If you need a new tag, please update the jsDoc to reflect it. 
  */
-
-const urlParams = new URLSearchParams(window.location.search);
-const quizType = urlParams.get('type');
 
 /**
  * Global question list populated based on url quiz type
