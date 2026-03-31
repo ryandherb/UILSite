@@ -1838,7 +1838,7 @@ out.println(str.substring(2));
         },
         correctAnswer: 'd',
         level: 'District',
-        tags: ['String','Tracing']
+        tags: ['String', 'Tracing']
     },
     {
         question: 'What is output by the code?',
@@ -1855,7 +1855,7 @@ out.println(a);
         },
         correctAnswer: 'a',
         level: 'District',
-        tags: ['Boolean','Tracing']
+        tags: ['Boolean', 'Tracing']
     },
     {
         question: 'What is output by the code?',
@@ -1873,7 +1873,7 @@ out.print(Math.max(y,x));
         },
         correctAnswer: 'd',
         level: 'District',
-        tags: ['Numbers','Tracing']
+        tags: ['Numbers', 'Tracing']
     },
     {
         question: 'What is output by the code?',
@@ -1895,11 +1895,11 @@ out.println(n+" "+ii);
         },
         correctAnswer: 'b',
         level: 'District',
-        tags: ['Tracing','Numbers']
+        tags: ['Tracing', 'Numbers']
     },
     {
         question: 'What is output by the code?',
-        code:`
+        code: `
 int a = 34 + 21 & 9;
 int b = a | 39 % 7;
 a ^= b * 9 / 5;
@@ -1914,6 +1914,621 @@ out.println(a);
         },
         correctAnswer: 'b',
         level: 'District',
-        tags: ['Tracing','Numbers']
+        tags: ['Tracing', 'Numbers']
+    },
+
+    // 2024 State
+    {
+        question: "Which of the following has the most 1's in its binary representation?",
+        answers: {
+            a: "7654_8",
+            b: "AAA_16",
+            c: "32132_4",
+            d: "444444_8",
+            e: "63_10"
+        },
+        correctAnswer: 'a',
+        level: 'State',
+        tags: ["Misc", "Numbers"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+out.print(22 % 30 * 4 / 10);
+        `,
+        answers: {
+            a: "6",
+            b: "8",
+            c: "10",
+            d: "11",
+            e: "12"
+        },
+        correctAnswer: 'b',
+        level: 'State',
+        tags: ["Tracing", "Numbers"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+String Alpha = "ABCDEFGHIJKLM";
+String Beta = "NOPQRSTUVWXYZ";
+String Alphabet = Alpha+Beta;
+String Z = Alphabet.substring(10,15);
+out.print(Z.substring(3));
+        `,
+        answers: {
+            a: "MNO",
+            b: "MN",
+            c: "NOP",
+            d: "NO",
+            e: "LMNOP"
+        },
+        correctAnswer: 'd',
+        level: 'State',
+        tags: ["String"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+boolean A = true;
+boolean B = !A || A;
+boolean C = !B && A;
+out.print(B ^ C);
+        `,
+        answers: {
+            a: "true",
+            b: "false",
+        },
+        correctAnswer: 'a',
+        level: 'State',
+        tags: ["Boolean"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int T = 10 + 20 * 30 / 40;
+int R = 40 + 30 * 20 / 10;
+int H = T + R >> 2;
+out.print(H);
+        `,
+        answers: {
+            a: "24",
+            b: "28",
+            c: "31",
+            d: "50",
+            e: "64"
+        },
+        correctAnswer: 'c',
+        level: 'State',
+        tags: ["Numbers"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+double A = Math.sqrt(10);
+double B = Math.sqrt(5);
+double C = Math.sqrt(2);
+int D = (int)(A*B*C*C*C);
+out.print(D);
+        `,
+        answers: {
+            a: "18",
+            b: "19",
+            c: "20",
+            d: "21",
+            e: "22"
+        },
+        correctAnswer: 'c',
+        level: 'State',
+        tags: ["Numbers"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int A = 11; int B = 10; int C = 12;
+if(A>C) A++; B--;
+if(A>B) B++; C--;
+if(B>C) C++; A--;
+if(C>B) A++; B--;
+if(B>A) B++; C--;
+if(C>A) C++; A--;
+out.print(A+" "+B+" "+C);
+        `,
+        answers: {
+            a: "12 10 11",
+            b: "9 9 9",
+            c: "10 11 8",
+            d: "10 10 10",
+            e: "10 9 10"
+        },
+        correctAnswer: 'e',
+        level: 'State',
+        tags: ["Numbers", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int[] Numbers = {8,6,7,5,3,0,9};
+int C = Numbers[1];
+int D = C;
+for(int x=Numbers[4]; x<D; x++)
+    C+=Numbers[x];
+out.print(C);
+        `,
+        answers: {
+            a: "12",
+            b: "14",
+            c: "18",
+            d: "23",
+            e: "24"
+        },
+        correctAnswer: 'b',
+        level: 'State',
+        tags: ["Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+String St = "ABCDEFGHIJ";
+for(int x=1; x<=3; x++)
+{
+    int T = St.length();
+    St = St.substring(1,T-1);
+}
+out.print(St);
+        `,
+        answers: {
+            a: "D",
+            b: "DEF",
+            c: "DEFG",
+            d: "EFG",
+            e: "DEFGHIJ"
+        },
+        correctAnswer: 'c',
+        level: 'State',
+        tags: ["String", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+out.print((int)'A' - (int)'a');
+        `,
+        answers: {
+            a: "26",
+            b: "-26",
+            c: "12",
+            d: "-12",
+            e: "-32"
+        },
+        correctAnswer: 'e',
+        level: 'State',
+        tags: ["Misc"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int A = 4; int B = 7; int C = 8;
+out.print((A<B)?"SO ":"VERY ");
+out.print((C<B)?"TIRED ":"HUNGRY ");
+        `,
+        answers: {
+            a: "SO VERY TIRED",
+            b: "SO TIRED",
+            c: "VERY TIRED",
+            d: "VERY HUNGRY",
+            e: "SO HUNGRY"
+        },
+        correctAnswer: 'e',
+        level: 'State',
+        tags: ["Misc"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int A = 30 & 29;
+int B = 29 & 28;
+int C = A | B;
+out.print(C);
+        `,
+        answers: {
+            a: "15",
+            b: "28",
+            c: "29",
+            d: "30",
+            e: "31"
+        },
+        correctAnswer: 'b',
+        level: 'State',
+        tags: ["Numbers"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int A = 12345678;
+int B = A % 10;
+int C = A / 100;
+int D = C % 10;
+int E = C / 100;
+int F = E % 10;
+int G = E / 100;
+out.print(B+D+F+G);
+        `,
+        answers: {
+            a: "30",
+            b: "32",
+            c: "35",
+            d: "36",
+            e: "40"
+        },
+        correctAnswer: 'a',
+        level: 'State',
+        tags: ["Numbers"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int x = 100;
+while (x>75)
+    x=x-6;
+while (x<90)
+    x=x+4;
+while (x>40)
+    x=x-10;
+out.print(x);
+        `,
+        answers: {
+            a: "32",
+            b: "36",
+            c: "40",
+            d: "75",
+            e: "90"
+        },
+        correctAnswer: 'c',
+        level: 'State',
+        tags: ["Numbers", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int C = 0;
+int[]A = {0,1,10,11,100,101,111};
+int[]B = {22,21,20,12,11,10,2,1,0};
+for(int x : A)
+    for(int y : B)
+        if(y/10==x/10)
+            C++;
+out.print(C);
+        `,
+        answers: {
+            a: "12",
+            b: "13",
+            c: "14",
+            d: "48",
+            e: "54"
+        },
+        correctAnswer: 'a',
+        level: 'State',
+        tags: ["Numbers", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int T = 0;
+String A = new String("UIL");
+String B = new String("UIL");
+String C = new String("TEXAS");
+if (A==B) T++;
+if (B==C) T++;
+if (A==C) T++;
+if (B==C) T++;
+if (A==C) T++;
+if (B==C) T++;
+if (A.equals(C)) T++;
+if (A.equals(B)) T++;
+out.print(T);
+        `,
+        answers: {
+            a: "1",
+            b: "2",
+            c: "4",
+            d: "6",
+            e: "8"
+        },
+        correctAnswer: 'a',
+        level: 'State',
+        tags: ["String", "Misc"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+TreeSet<Integer>House;
+House = new TreeSet<Integer>();
+for(int x=1; x<=20; x++)
+    House.add(x);
+for(int x=15; x<=35; x++)
+    House.add(x);
+for(int x=-12; x<=8; x++)
+    House.add(x);
+int C = 0;
+for(int Bob:House)
+    C = Bob;
+out.print(C%10);
+        `,
+        answers: {
+            a: "1",
+            b: "3",
+            c: "5",
+            d: "7",
+            e: "9"
+        },
+        correctAnswer: 'c',
+        level: 'State',
+        tags: ["Data Structures", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int T = 83;
+String St;
+St = Integer.toOctalString(T);
+St = St.substring(1,2);
+out.print(St);
+        `,
+        answers: {
+            a: "1",
+            b: "2",
+            c: "3",
+            d: "4",
+            e: "8"
+        },
+        correctAnswer: 'b',
+        level: 'State',
+        tags: ["Numbers", "Misc"]
+    },
+    {
+        question: "For which value of N below will the code to the right print an odd number?",
+        code:
+            `
+int C = 0;
+for(int x=1; x<=N; x++)
+    if(N % x == 0)
+        C++;
+out.print(C);
+        `,
+        answers: {
+            a: "200",
+            b: "72",
+            c: "18",
+            d: "44",
+            e: "144"
+        },
+        correctAnswer: 'e',
+        level: 'State',
+        tags: ["Numbers", "Tracing"]
+    },
+    {
+        question: "In the code to the right, what is output on line #21?",
+        code:
+            `
+public static int mystery(int M)
+{
+    if (M > 10)
+        return mystery(M-3)+M+3;
+    if (M > 5)
+        return mystery(M-2)+M+2;
+    return M/2;
+}
+// Client Code
+out.println(mystery(3)); //line #21
+out.println(mystery(8)); //line #22
+out.println(mystery(15));//line #23
+        `,
+        answers: {
+            a: "1",
+            b: "1.5",
+            c: "2",
+            d: "2.5",
+            e: "5"
+        },
+        correctAnswer: 'a',
+        level: 'State',
+        tags: ["Recursion", "Tracing"]
+    },
+    {
+        question: "In the code to the right, what is output on line #22?",
+        code:
+            `
+public static int mystery(int M)
+{
+    if (M > 10)
+        return mystery(M-3)+M+3;
+    if (M > 5)
+        return mystery(M-2)+M+2;
+    return M/2;
+}
+// Client Code
+out.println(mystery(3)); //line #21
+out.println(mystery(8)); //line #22
+out.println(mystery(15));//line #23
+        `,
+        answers: {
+            a: "16",
+            b: "20",
+            c: "24",
+            d: "28",
+            e: "32"
+        },
+        correctAnswer: 'b',
+        level: 'State',
+        tags: ["Recursion", "Tracing"]
+    },
+    {
+        question: "In the code to the right, what is output on line #23?",
+        code:
+            `
+public static int mystery(int M)
+{
+    if (M > 10)
+        return mystery(M-3)+M+3;
+    if (M > 5)
+        return mystery(M-2)+M+2;
+    return M/2;
+}
+// Client Code
+out.println(mystery(3)); //line #21
+out.println(mystery(8)); //line #22
+out.println(mystery(15));//line #23
+        `,
+        answers: {
+            a: "35",
+            b: "40",
+            c: "45",
+            d: "50",
+            e: "55"
+        },
+        correctAnswer: 'e',
+        level: 'State',
+        tags: ["Recursion", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+ArrayList<String>Starsky;
+Starsky = new ArrayList<String>();
+String Hutch = "UNIVERSITY";
+for(int x=0; x<Hutch.length(); x++)
+    Starsky.add(Hutch.substring(x));
+for(int x=0; x<Starsky.size(); x++)
+{
+    String A = Starsky.get(x);
+    if(A.matches("[AEIOU].*"))
+        Starsky.remove(x);
+}
+out.print(Starsky.get(2));
+        `,
+        answers: {
+            a: "RSITY",
+            b: "VERSITY",
+            c: "VERSIT",
+            d: "TY",
+            e: "RIT"
+        },
+        correctAnswer: 'a',
+        level: 'State',
+        tags: ["Data Structures", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int N = 625;
+for(int x = 1; x<=3; x++)
+    N = (int)(Math.sqrt(N)+ 1);
+out.print(N);
+        `,
+        answers: {
+            a: "1",
+            b: "2",
+            c: "3",
+            d: "4",
+            e: "5"
+        },
+        correctAnswer: 'c',
+        level: 'State',
+        tags: ["Numbers", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+int C = 0;
+int x = 15;
+for(; x<100; )
+{
+    if(x/10==6)
+        C += x%10;
+    x+=3;
+}
+out.print(C);
+        `,
+        answers: {
+            a: "15",
+            b: "18",
+            c: "27",
+            d: "36",
+            e: "45"
+        },
+        correctAnswer: 'b',
+        level: 'State',
+        tags: ["Numbers", "Tracing"]
+    },
+    {
+        question: "What is the output of the code segment to the right?",
+        code:
+            `
+String St = "A";
+int C = 0;
+for(int x=0; x<25; x=x+4)
+    St += "" + (char) (St.charAt(C) + x);
+out.println(St);
+        `,
+        answers: {
+            a: "AEIMQUZ",
+            b: "AAEIMQUY",
+            c: "AAEJNRVZ",
+            d: "AAEIMPTY",
+            e: "AAZ"
+        },
+        correctAnswer: 'b',
+        level: 'State',
+        tags: ["String", "Tracing"]
+    },
+    {
+        question: "Evaluate the postfix expression to the right.",
+        code:
+            `
+10 9 8 7 6 5 * + - + -
+        `,
+        answers: {
+            a: "30",
+            b: "50",
+            c: "92",
+            d: "81",
+            e: "93"
+        },
+        correctAnswer: 'a',
+        level: 'State',
+        tags: ["Numbers", "Misc"]
+    },
+    {
+        question: `Create a binary search tree inserting the letters "AUSTIN". Start with A and end with N. How many leaves will the tree have?`,
+        answers: {
+            a: "1",
+            b: "2",
+            c: "4",
+            d: "6",
+            e: "8"
+        },
+        correctAnswer: 'b',
+        level: 'State',
+        tags: ["Data Structures", "Misc"]
     },
 ];
